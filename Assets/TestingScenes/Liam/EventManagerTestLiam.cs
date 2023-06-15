@@ -29,4 +29,11 @@ public class EventManagerTestLiam : MonoBehaviour
         dayPassed();
     }
 
+    public delegate void energyStatistic();
+    public static energyStatistic energyUse;
+
+    public static void EnergySupply()
+    {
+        energyUse();
+    }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestAction : MonoBehaviour
+public class TestStream : MonoBehaviour
 {
     public int test;
     // Start is called before the first frame update
@@ -20,6 +20,6 @@ public class TestAction : MonoBehaviour
     void OnMouseUp()
     {
         test++;
-        EventManagerTestLiam.ConsumeEnergy();
+        EventManagerTestLiam.GoLive();
     }
 }

@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class EventManagerTestLiam : MonoBehaviour
 {
-    public delegate void energyTotal();
-    public static event energyTotal energyUsed;
+    public delegate void workDay();
+    public static event workDay workShift;
         // Start is called before the first frame update
 
-    public static void ConsumeEnergy()
+    public static void GoToWork()
     {
-        energyUsed();
+        workShift();
+    }
+
+    public delegate void streamDay();
+    public static event streamDay streamSession;
+
+    public static void GoLive()
+    {
+        streamSession();
     }
 
     public delegate void day();

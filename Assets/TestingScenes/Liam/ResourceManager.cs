@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class TestDayEnd : MonoBehaviour
+public class ResourceManager : MonoBehaviour
 {
-    public int day;
-    public Text dayStat;
+    public int money;
+    public int happiness;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +17,5 @@ public class TestDayEnd : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void OnMouseUp()
-    {
-        day++;
-        dayStat.text = day.ToString();
-        EventManagerTestLiam.NextDay();
     }
 }

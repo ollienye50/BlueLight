@@ -8,7 +8,7 @@ public class EnergyManagement : MonoBehaviour
     // public TestStream potat;
     //public Energy energyScript;
     public int day;
-    public int money;
+    public static int money;
     public int happiness;
     public Text monStat;
     public Text HappStat;
@@ -45,6 +45,8 @@ public class EnergyManagement : MonoBehaviour
     void DayStart()
     {
         day++;
+        RentCounter.rentCount-=1;
+        RentCounter.RentCheck();
         dayStat.text = day.ToString();
     }
 

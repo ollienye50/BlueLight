@@ -20,6 +20,6 @@ public class TestStream : MonoBehaviour
     void OnMouseUp()
     {
         test++;
-        EventManagerTestLiam.GoLive();
+        EventManagerTestLiam.instance.GoLive();
     }
 }

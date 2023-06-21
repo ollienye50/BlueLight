@@ -1,39 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EventManagerTestLiam : MonoBehaviour
 {
-    public delegate void workDay();
-    public static event workDay workShift;
+    public static EventManagerTestLiam instance;
+
+    private void Awake()
+    {
+        if(instance != null && instance != this)
+        {
+            Destroy(this);
+        } 
+        else
+        {
+            instance = this;
+            Debug.Log(instance.name);
+        }
+    }
+
+    //public delegate void workDay();
+    public UnityEvent workShift;
         // Start is called before the first frame update
 
-    public static void GoToWork()
+    public void GoToWork()
     {
-        workShift();
+        workShift.Invoke();
     }
 
-    public delegate void streamDay();
-    public static event streamDay streamSession;
+   // public delegate void streamDay();
+    public UnityEvent streamSession;
 
-    public static void GoLive()
+    public void GoLive()
     {
-        streamSession();
+        streamSession.Invoke();
     }
 
-    public delegate void day();
-    public static event day dayPassed;
+    //public delegate void day();
+    public UnityEvent dayPassed;
 
-    public static void NextDay()
+    public void NextDay()
     {
-        dayPassed();
+        dayPassed.Invoke();
     }
 
-    public delegate void energyStatistic();
-    public static energyStatistic energyUse;
+   // public delegate void energyStatistic();
+    public UnityEvent energyUse;
 
-    public static void EnergySupply()
+    public void EnergySupply()
     {
-        energyUse();
+        energyUse.Invoke();
     }
 }

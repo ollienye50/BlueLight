@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   day: 0
+  money: 0
   happiness: 0
   monStat: {fileID: 1237286378}
   HappStat: {fileID: 785019632}
@@ -507,7 +508,6 @@ GameObject:
   - component: {fileID: 1572438045}
   - component: {fileID: 1572438044}
   - component: {fileID: 1572438043}
-  - component: {fileID: 1572438048}
   m_Layer: 0
   m_Name: EndDay
   m_TagString: Untagged
@@ -613,18 +613,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1572438048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572438042}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cc4fee813eb2d440bf844cc1aad86ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1632688200
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,6 +625,7 @@ GameObject:
   - component: {fileID: 1632688202}
   - component: {fileID: 1632688201}
   - component: {fileID: 1632688204}
+  - component: {fileID: 1632688205}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -706,6 +695,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191b7fd2f3341e648a45b2734a553b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  workShift:
+    m_PersistentCalls:
+      m_Calls: []
+  streamSession:
+    m_PersistentCalls:
+      m_Calls: []
+  dayPassed:
+    m_PersistentCalls:
+      m_Calls: []
+  energyUse:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1632688205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632688200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c05bb895ffd9745993209265efbe11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rentCount: 7
+  rentCost: 10
 --- !u!1 &1675571201
 GameObject:
   m_ObjectHideFlags: 0

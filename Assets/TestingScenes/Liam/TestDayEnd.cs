@@ -19,6 +19,6 @@ public class TestDayEnd : MonoBehaviour
     void OnMouseUp()
     {
         
-        EventManagerTestLiam.NextDay();
+        EventManagerTestLiam.instance.NextDay();
     }
 }

@@ -5,10 +5,23 @@ using UnityEngine.UI;
 
 public class EnergyManagement : MonoBehaviour
 {
+    public static EnergyManagement instance;
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     // public TestStream potat;
     //public Energy energyScript;
     public int day;
-    public static int money;
+    public int money;
     public int happiness;
     public Text monStat;
     public Text HappStat;
@@ -17,23 +30,26 @@ public class EnergyManagement : MonoBehaviour
 
     // Start is called before the first frame update
 
-    void OnEnable()
+    /*void OnEnable()
     {
-        EventManagerTestLiam.workShift += Shift;
-        EventManagerTestLiam.streamSession += Live;
-        EventManagerTestLiam.dayPassed += DayStart;
-    }
+        EventManagerTestLiam.instance.workShift.AddListener(Shift);
+        EventManagerTestLiam.instance.streamSession.AddListener(Live);
+        EventManagerTestLiam.instance.dayPassed.AddListener(DayStart);
+    }*/
 
-    void OnDisable()
+    /*void OnDisable()
     {
-        EventManagerTestLiam.workShift -= Shift;
-        EventManagerTestLiam.streamSession += Live;
-        EventManagerTestLiam.dayPassed -= DayStart;
-    }
+        EventManagerTestLiam.instance.workShift.RemoveListener(Shift);
+        EventManagerTestLiam.instance.streamSession.RemoveListener(Live);
+        EventManagerTestLiam.instance.dayPassed.RemoveListener(DayStart);
+    }*/
 
     void Start()
     {
         DayStart();
+        EventManagerTestLiam.instance.workShift.AddListener(Shift);
+        EventManagerTestLiam.instance.streamSession.AddListener(Live);
+        EventManagerTestLiam.instance.dayPassed.AddListener(DayStart);
     }
 
     // Update is called once per frame
@@ -45,8 +61,8 @@ public class EnergyManagement : MonoBehaviour
     void DayStart()
     {
         day++;
-        RentCounter.rentCount-=1;
-        RentCounter.RentCheck();
+        RentCounter.instance.rentCount-=1;
+        RentCounter.instance.RentCheck();
         dayStat.text = day.ToString();
     }
 
@@ -56,7 +72,7 @@ public class EnergyManagement : MonoBehaviour
         monStat.text = money.ToString();
         happiness -= 5;
         HappStat.text = happiness.ToString();
-        EventManagerTestLiam.EnergySupply();
+        EventManagerTestLiam.instance.EnergySupply();
     }
 
     void Live()
@@ -65,7 +81,7 @@ public class EnergyManagement : MonoBehaviour
         monStat.text = money.ToString();
         happiness += 5;
         HappStat.text = happiness.ToString();
-        EventManagerTestLiam.EnergySupply();
+        EventManagerTestLiam.instance.EnergySupply();
     }
 
 }

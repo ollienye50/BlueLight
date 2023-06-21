@@ -12,14 +12,14 @@ public class Energy : MonoBehaviour
     
     void OnEnable()
     {
-        EventManagerTestLiam.energyUse += Activity;
-        EventManagerTestLiam.dayPassed += DayStart;
+        EventManagerTestLiam.instance.energyUse.AddListener(Activity);
+        EventManagerTestLiam.instance.dayPassed.AddListener(DayStart);
     }
 
     void Ondisable()
     {
-        EventManagerTestLiam.energyUse -= Activity;
-        EventManagerTestLiam.dayPassed -= DayStart;
+        EventManagerTestLiam.instance.energyUse.RemoveListener(Activity);
+        EventManagerTestLiam.instance.dayPassed.RemoveListener(DayStart);
     }
 
     void Start()

@@ -16,10 +16,12 @@ public class OpenWindowClick : MonoBehaviour
 
     IEnumerator WindowTabOpenClose()
     {
+        desktopIcon.GetComponent<BoxCollider>().enabled = false;
         windowTab.gameObject.SetActive(true);
         Debug.Log("wait");
         yield return new WaitForSeconds(3f);
         windowTab.gameObject.SetActive(false);
+        desktopIcon.GetComponent<BoxCollider>().enabled=true;
         yield break;
 
     }

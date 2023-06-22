@@ -5,13 +5,23 @@ using UnityEngine;
 
 public class OpenWindowClick : MonoBehaviour
 {
-    public GameObject WindowTab;
-    public GameObject DesktopIcon;
+    public GameObject windowTab;
+    public GameObject desktopIcon;
     public Camera camera;
     // Start is called before the first frame update
     void Start()
     {
-        WindowTab.gameObject.SetActive(false);
+        windowTab.gameObject.SetActive(false);
+    }
+
+    IEnumerator WindowTabOpenClose()
+    {
+        windowTab.gameObject.SetActive(true);
+        Debug.Log("wait");
+        yield return new WaitForSeconds(3f);
+        windowTab.gameObject.SetActive(false);
+        yield break;
+
     }
 
     // Update is called once per frame
@@ -25,10 +35,9 @@ public class OpenWindowClick : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log(hit.transform.gameObject.name);
-                if (DesktopIcon == hit.transform.gameObject)
+                if (desktopIcon == hit.transform.gameObject)
                 {
-                    WindowTab.gameObject.SetActive(true);
-                    Debug.Log("Window Spawn");
+                    StartCoroutine(WindowTabOpenClose());
                 }
                 
             }

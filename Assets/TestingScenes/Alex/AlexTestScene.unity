@@ -365,8 +365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a0c3a2f5b428f40b36d9db9e9a4792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WindowTab: {fileID: 1825926675}
-  DesktopIcon: {fileID: 275925595}
+  windowTab: {fileID: 1825926675}
+  desktopIcon: {fileID: 275925595}
   camera: {fileID: 157666009}
 --- !u!1 &1825926675
 GameObject:
@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1825926676
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -597,6 +597,7 @@ MonoBehaviour:
   StreamButton: {fileID: 1654167507}
   WorkWindow: {fileID: 207244433}
   WorkButton: {fileID: 356367976}
+  ShutDownButton: {fileID: 1331696398}
   camera: {fileID: 676004625}
 --- !u!1 &356367976
 GameObject:
@@ -814,7 +815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8765872c60829c4490e5bdc971ab240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 0
 --- !u!1 &501206041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1631,7 @@ GameObject:
   - component: {fileID: 1654167511}
   - component: {fileID: 1654167510}
   - component: {fileID: 1654167509}
-  - component: {fileID: 1654167508}
+  - component: {fileID: 1654167513}
   m_Layer: 0
   m_Name: StreamButton
   m_TagString: Untagged
@@ -1639,19 +1639,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1654167508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654167507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8765872c60829c4490e5bdc971ab240, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  test: 0
 --- !u!65 &1654167509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1738,6 +1725,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654167513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654167507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8dfbb8c71892104db51c7f143e98081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: 0
 --- !u!1 &2017927900
 GameObject:
   m_ObjectHideFlags: 0

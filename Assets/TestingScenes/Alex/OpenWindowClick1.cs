@@ -5,23 +5,47 @@ using UnityEngine;
 
 public class OpenWindowClick : MonoBehaviour
 {
-    public GameObject windowTab;
-    public GameObject desktopIcon;
+    public GameObject StreamWindow;
+    public GameObject StreamButton;
+    public GameObject WorkWindow;
+    public GameObject WorkButton;
+    public GameObject ShutDownButton;
     public Camera camera;
     // Start is called before the first frame update
     void Start()
     {
-        windowTab.gameObject.SetActive(false);
+        StreamWindow.gameObject.SetActive(false);
+        WorkWindow.gameObject.SetActive(false);
     }
 
-    IEnumerator WindowTabOpenClose()
+    IEnumerator StreamTabOpenClose()
     {
-        desktopIcon.GetComponent<BoxCollider>().enabled = false;
-        windowTab.gameObject.SetActive(true);
+        StreamButton.GetComponent<BoxCollider>().enabled = false;
+        WorkButton.GetComponent<BoxCollider>().enabled = false;
+        ShutDownButton.GetComponent<BoxCollider>().enabled = false;
+        StreamWindow.gameObject.SetActive(true);
         Debug.Log("wait");
         yield return new WaitForSeconds(3f);
-        windowTab.gameObject.SetActive(false);
-        desktopIcon.GetComponent<BoxCollider>().enabled=true;
+        StreamWindow.gameObject.SetActive(false);
+        WorkButton.GetComponent<BoxCollider>().enabled = true;
+        StreamButton.GetComponent<BoxCollider>().enabled=true;
+        ShutDownButton.GetComponent<BoxCollider>().enabled = true;
+        yield break;
+
+    }
+
+    IEnumerator WorkTabOpenClose()
+    {
+        StreamButton.GetComponent<BoxCollider>().enabled = false;
+        WorkButton.GetComponent<BoxCollider>().enabled = false;
+        ShutDownButton.GetComponent<BoxCollider>().enabled = false;
+        WorkWindow.gameObject.SetActive(true);
+        Debug.Log("wait");
+        yield return new WaitForSeconds(3f);
+        WorkWindow.gameObject.SetActive(false);
+        WorkButton.GetComponent<BoxCollider>().enabled = true;
+        StreamButton.GetComponent<BoxCollider>().enabled = true;
+        ShutDownButton.GetComponent<BoxCollider>().enabled = true;
         yield break;
 
     }
@@ -37,11 +61,15 @@ public class OpenWindowClick : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log(hit.transform.gameObject.name);
-                if (desktopIcon == hit.transform.gameObject)
+                if (StreamButton == hit.transform.gameObject)
                 {
-                    StartCoroutine(WindowTabOpenClose());
+                    StartCoroutine(StreamTabOpenClose());
                 }
-                
+                if (WorkButton == hit.transform.gameObject)
+                {
+                    StartCoroutine(WorkTabOpenClose());
+                }
+
             }
         }
 

@@ -21,5 +21,6 @@ public class TestStream : MonoBehaviour
     {
         test++;
         EventManagerTestLiam.instance.GoLive();
+        Debug.Log("click");
     }
 }

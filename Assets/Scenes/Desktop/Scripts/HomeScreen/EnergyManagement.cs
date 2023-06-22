@@ -26,6 +26,7 @@ public class EnergyManagement : MonoBehaviour
     public Text monStat;
     public Text HappStat;
     public Text dayStat;
+    public Text rentStat;
 
 
     // Start is called before the first frame update
@@ -64,6 +65,7 @@ public class EnergyManagement : MonoBehaviour
         RentCounter.instance.rentCount-=1;
         RentCounter.instance.RentCheck();
         dayStat.text = day.ToString();
+        rentStat.text = RentCounter.instance.rentCount.ToString();
     }
 
     void Shift()

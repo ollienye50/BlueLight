@@ -12,13 +12,15 @@ public class Energy : MonoBehaviour
     
     void OnEnable()
     {
-        EventManagerTestLiam.instance.energyUse.AddListener(Activity);
+        EventManagerTestLiam.instance.energyUseWork.AddListener(ActivityWork);
+        EventManagerTestLiam.instance.energyUseStream.AddListener(ActivityStream);
         EventManagerTestLiam.instance.dayPassed.AddListener(DayStart);
     }
 
     void Ondisable()
     {
-        EventManagerTestLiam.instance.energyUse.RemoveListener(Activity);
+        EventManagerTestLiam.instance.energyUseWork.RemoveListener(ActivityWork);
+        EventManagerTestLiam.instance.energyUseStream.RemoveListener(ActivityStream);
         EventManagerTestLiam.instance.dayPassed.RemoveListener(DayStart);
     }
 
@@ -42,16 +44,33 @@ public class Energy : MonoBehaviour
         canDoThing = true;
     }
 
-    void Activity()
+    void ActivityWork()
     {
         if (canDoThing==true&&energy > 0) 
         {
             energy--;
             enerStat.text = energy.ToString();
+            EventManagerTestLiam.instance.GoToWork();
         }
         else
         {
             canDoThing=false;
+            Debug.Log("nope");
+        }
+
+    }
+
+    void ActivityStream()
+    {
+        if (canDoThing == true && energy > 0)
+        {
+            energy--;
+            enerStat.text = energy.ToString();
+            EventManagerTestLiam.instance.GoLive();
+        }
+        else
+        {
+            canDoThing = false;
             Debug.Log("nope");
         }
 

@@ -74,7 +74,6 @@ public class EnergyManagement : MonoBehaviour
         monStat.text = money.ToString();
         happiness -= 5;
         HappStat.text = happiness.ToString();
-        EventManagerTestLiam.instance.EnergySupply();
     }
 
     void Live()
@@ -83,7 +82,6 @@ public class EnergyManagement : MonoBehaviour
         monStat.text = money.ToString();
         happiness += 5;
         HappStat.text = happiness.ToString();
-        EventManagerTestLiam.instance.EnergySupply();
     }
 
 }

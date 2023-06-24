@@ -22,7 +22,7 @@ public class TestStream : MonoBehaviour
     void OnMouseUp()
     {
         test++;
-        EventManagerTestLiam.instance.GoLive();
+        EventManagerTestLiam.instance.EnergySupplyStream();
         Debug.Log("click");
     }
 }

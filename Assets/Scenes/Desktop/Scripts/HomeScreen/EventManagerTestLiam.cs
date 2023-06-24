@@ -46,10 +46,17 @@ public class EventManagerTestLiam : MonoBehaviour
     }
 
    // public delegate void energyStatistic();
-    public UnityEvent energyUse;
+    public UnityEvent energyUseWork;
 
-    public void EnergySupply()
+    public void EnergySupplyWork()
     {
-        energyUse.Invoke();
+        energyUseWork.Invoke();
+    }
+
+    public UnityEvent energyUseStream;
+
+    public void EnergySupplyStream()
+    {
+        energyUseStream.Invoke();
     }
 }

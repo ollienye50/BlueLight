@@ -20,6 +20,6 @@ public class TestWork : MonoBehaviour
     void OnMouseUp()
     {
         test++;
-        EventManagerTestLiam.instance.GoToWork();
+        EventManagerTestLiam.instance.EnergySupplyWork();
     }
 }

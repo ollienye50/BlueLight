@@ -38,7 +38,7 @@ public class Energy : MonoBehaviour
 
     void DayStart()
     {
-        energy = 5;
+        energy = 3;
         enerStat.text = energy.ToString();
         Debug.Log("Energy:" + energy);
         canDoThing = true;

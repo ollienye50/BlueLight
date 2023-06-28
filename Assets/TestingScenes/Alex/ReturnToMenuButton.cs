@@ -7,7 +7,7 @@ public class ReturnToMenuButton : MonoBehaviour
 {
     public void loadScene(string MainMenu)
     {
-        SceneManager.LoadScene(MainMenu);
+        SceneManager.LoadScene(2);
     }
     
 }

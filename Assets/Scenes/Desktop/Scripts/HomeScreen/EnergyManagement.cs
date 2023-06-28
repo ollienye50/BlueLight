@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnergyManagement : MonoBehaviour
 {
@@ -66,6 +67,8 @@ public class EnergyManagement : MonoBehaviour
         RentCounter.instance.RentCheck();
         dayStat.text = day.ToString();
         rentStat.text = RentCounter.instance.rentCount.ToString();
+        MoneyCheck();
+        DayCheck();
     }
 
     void Shift()
@@ -74,6 +77,7 @@ public class EnergyManagement : MonoBehaviour
         monStat.text = money.ToString();
         happiness -= 3;
         HappStat.text = happiness.ToString();
+        HappinessCheck();
     }
 
     void Live()
@@ -81,6 +85,30 @@ public class EnergyManagement : MonoBehaviour
         monStat.text = money.ToString();
         happiness += 2;
         HappStat.text = happiness.ToString();
+    }
+
+    public void HappinessCheck()
+    {
+        if(happiness <=0)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    public void MoneyCheck()
+    {
+        if (money <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    public void DayCheck()
+    {
+        if (money >= 22)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
 }

@@ -12,10 +12,15 @@ public class OpenWindowClick : MonoBehaviour
     public GameObject ShutDownButton;
     public Camera camera;
     // Start is called before the first frame update
+
     void Start()
     {
         StreamWindow.gameObject.SetActive(false);
         WorkWindow.gameObject.SetActive(false);
+
+        EventManagerTestLiam.instance.workShift.AddListener(Shift);
+        EventManagerTestLiam.instance.streamSession.AddListener(Live);
+
     }
 
     IEnumerator StreamTabOpenClose()
@@ -63,15 +68,25 @@ public class OpenWindowClick : MonoBehaviour
                 Debug.Log(hit.transform.gameObject.name);
                 if (StreamButton == hit.transform.gameObject)
                 {
-                    StartCoroutine(StreamTabOpenClose());
+                    EventManagerTestLiam.instance.EnergySupplyStream();
                 }
                 if (WorkButton == hit.transform.gameObject)
                 {
-                    StartCoroutine(WorkTabOpenClose());
+                    EventManagerTestLiam.instance.EnergySupplyWork();
                 }
 
             }
         }
 
+    }
+
+    void Shift()
+    {
+        StartCoroutine(WorkTabOpenClose());
+    }
+
+    void Live()
+    {
+        StartCoroutine(StreamTabOpenClose());
     }
 }

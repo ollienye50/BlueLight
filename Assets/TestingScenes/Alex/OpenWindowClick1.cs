@@ -30,7 +30,7 @@ public class OpenWindowClick : MonoBehaviour
         ShutDownButton.GetComponent<BoxCollider>().enabled = false;
         StreamWindow.gameObject.SetActive(true);
         Debug.Log("wait");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         StreamWindow.gameObject.SetActive(false);
         WorkButton.GetComponent<BoxCollider>().enabled = true;
         StreamButton.GetComponent<BoxCollider>().enabled=true;
@@ -46,7 +46,7 @@ public class OpenWindowClick : MonoBehaviour
         ShutDownButton.GetComponent<BoxCollider>().enabled = false;
         WorkWindow.gameObject.SetActive(true);
         Debug.Log("wait");
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         WorkWindow.gameObject.SetActive(false);
         WorkButton.GetComponent<BoxCollider>().enabled = true;
         StreamButton.GetComponent<BoxCollider>().enabled = true;

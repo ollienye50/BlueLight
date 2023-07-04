@@ -65,6 +65,7 @@ public class EnergyManagement : MonoBehaviour
         day++;
         RentCounter.instance.rentCount-=1;
         RentCounter.instance.RentCheck();
+        monStat.text = money.ToString();
         dayStat.text = day.ToString();
         rentStat.text = RentCounter.instance.rentCount.ToString();
         MoneyCheck();
@@ -73,7 +74,7 @@ public class EnergyManagement : MonoBehaviour
 
     void Shift()
     {
-        money += 2;
+        money += 100;
         monStat.text = money.ToString();
         happiness -= 3;
         HappStat.text = happiness.ToString();
@@ -105,7 +106,7 @@ public class EnergyManagement : MonoBehaviour
 
     public void DayCheck()
     {
-        if (money >= 22)
+        if (day >= 22)
         {
             SceneManager.LoadScene(3);
         }

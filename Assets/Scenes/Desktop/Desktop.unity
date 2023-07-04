@@ -1284,7 +1284,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 500
 --- !u!222 &521244071
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   day: 0
-  money: 10
+  money: 500
   happiness: 5
   monStat: {fileID: 521244070}
   HappStat: {fileID: 2063204753}

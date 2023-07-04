@@ -19,7 +19,7 @@ public class RentCounter : MonoBehaviour
     }
 
     public int rentCount = 7;
-    public int rentCost = 10;
+    public int rentCost = 1000;
 
     public void RentCheck()
     {

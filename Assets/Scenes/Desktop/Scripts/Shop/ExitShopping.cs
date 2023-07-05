@@ -8,7 +8,7 @@ public class ExitShopping : MonoBehaviour
     private ShoppingWindow window;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         window = FindObjectOfType<ShoppingWindow>();
     }

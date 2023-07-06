@@ -59,4 +59,11 @@ public class EventManagerTestLiam : MonoBehaviour
     {
         energyUseStream.Invoke();
     }
+
+    public UnityEvent camPurchased;
+
+    public void BuyWebcam()
+    {
+        camPurchased.Invoke();
+    }
 }

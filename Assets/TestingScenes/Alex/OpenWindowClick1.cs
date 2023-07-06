@@ -10,6 +10,7 @@ public class OpenWindowClick : MonoBehaviour
     public GameObject WorkWindow;
     public GameObject WorkButton;
     public GameObject ShutDownButton;
+    public GameObject ShopButton;
     public Camera camera;
     // Start is called before the first frame update
 
@@ -28,6 +29,7 @@ public class OpenWindowClick : MonoBehaviour
         StreamButton.GetComponent<BoxCollider>().enabled = false;
         WorkButton.GetComponent<BoxCollider>().enabled = false;
         ShutDownButton.GetComponent<BoxCollider>().enabled = false;
+        ShopButton.GetComponent<BoxCollider>().enabled = false;
         StreamWindow.gameObject.SetActive(true);
         Debug.Log("wait");
         yield return new WaitForSeconds(1f);
@@ -35,6 +37,7 @@ public class OpenWindowClick : MonoBehaviour
         WorkButton.GetComponent<BoxCollider>().enabled = true;
         StreamButton.GetComponent<BoxCollider>().enabled=true;
         ShutDownButton.GetComponent<BoxCollider>().enabled = true;
+        ShopButton.GetComponent<BoxCollider>().enabled = true;
         yield break;
 
     }
@@ -44,6 +47,7 @@ public class OpenWindowClick : MonoBehaviour
         StreamButton.GetComponent<BoxCollider>().enabled = false;
         WorkButton.GetComponent<BoxCollider>().enabled = false;
         ShutDownButton.GetComponent<BoxCollider>().enabled = false;
+        ShopButton.GetComponent<BoxCollider>().enabled = false;
         WorkWindow.gameObject.SetActive(true);
         Debug.Log("wait");
         yield return new WaitForSeconds(1f);
@@ -51,6 +55,7 @@ public class OpenWindowClick : MonoBehaviour
         WorkButton.GetComponent<BoxCollider>().enabled = true;
         StreamButton.GetComponent<BoxCollider>().enabled = true;
         ShutDownButton.GetComponent<BoxCollider>().enabled = true;
+        ShopButton.GetComponent<BoxCollider>().enabled = true;
         yield break;
 
     }

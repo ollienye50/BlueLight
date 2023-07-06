@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class MicButton : MonoBehaviour
 {
-    public bool PurchasedMic = false;
-    public GameObject MicButt;
-    public GameObject Microphone;
+    public bool isMicPurchased = false;
+    public GameObject micButt;
+    public GameObject microphone;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        PurchasedMic = false;
-        Microphone.SetActive(false);
+        isMicPurchased = false;
+        microphone.SetActive(false);
     }
 
     private void OnMouseDown()
     {
         Debug.Log("pressed butt");
-        PurchasedMic = true;
-        MicButt.GetComponent<BoxCollider>().enabled = false;
-        Microphone.SetActive(true);
+        isMicPurchased = true;
+        micButt.GetComponent<BoxCollider>().enabled = false;
+        microphone.SetActive(true);
         EnergyManagement.instance.money -= 20;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
         EnergyManagement.instance.happiness += 8;

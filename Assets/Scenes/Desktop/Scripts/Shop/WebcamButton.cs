@@ -5,23 +5,23 @@ using UnityEngine;
 
 public class WebcamButton : MonoBehaviour
 {
-    public bool PurchasedCam = false;
-    public GameObject WebcamButt;
-    public GameObject Webcam;
+    public bool isWebcamPurchased = false;
+    public GameObject webcamButt;
+    public GameObject webcam;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        PurchasedCam = false;
-        Webcam.SetActive(false);
+        isWebcamPurchased = false;
+        webcam.SetActive(false);
     }
 
     private void OnMouseDown()
     {
         Debug.Log("pressed butt");
-        PurchasedCam = true;
-        WebcamButt.GetComponent<BoxCollider>().enabled = false;
-        Webcam.SetActive(true);
+        isWebcamPurchased = true;
+        webcamButt.GetComponent<BoxCollider>().enabled = false;
+        webcam.SetActive(true);
         EnergyManagement.instance.money -= 10;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
         EnergyManagement.instance.happiness += 5;

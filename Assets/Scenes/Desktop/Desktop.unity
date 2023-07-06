@@ -769,6 +769,7 @@ MonoBehaviour:
   WorkWindow: {fileID: 207244433}
   WorkButton: {fileID: 356367976}
   ShutDownButton: {fileID: 1331696398}
+  ShopButton: {fileID: 1855008405}
   camera: {fileID: 676004625}
 --- !u!1 &356367976
 GameObject:

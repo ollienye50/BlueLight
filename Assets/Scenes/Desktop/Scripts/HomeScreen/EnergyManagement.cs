@@ -24,6 +24,7 @@ public class EnergyManagement : MonoBehaviour
     public int day;
     public int money;
     public int happiness;
+    public int streamMon;
     public Text monStat;
     public Text HappStat;
     public Text dayStat;
@@ -74,7 +75,7 @@ public class EnergyManagement : MonoBehaviour
 
     void Shift()
     {
-        money += 100;
+        money += 75;
         monStat.text = money.ToString();
         happiness -= 3;
         HappStat.text = happiness.ToString();
@@ -85,6 +86,9 @@ public class EnergyManagement : MonoBehaviour
     {
         monStat.text = money.ToString();
         happiness += 2;
+        streamMon += 5;
+        money += streamMon;
+        monStat.text = money.ToString();
         HappStat.text = happiness.ToString();
     }
 

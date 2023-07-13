@@ -51,7 +51,7 @@ public class Energy : MonoBehaviour
 
     void DayStart()
     {
-        energy = 3;
+        energy = 5;
         enerStat.text = energy.ToString();
         Debug.Log("Energy:" + energy);
         canDoThing = true;
@@ -59,9 +59,9 @@ public class Energy : MonoBehaviour
 
     void ActivityWork()
     {
-        if (canDoThing==true&&energy > 0) 
+        if (canDoThing==true&&energy >=2) 
         {
-            energy--;
+            energy-=2;
             enerStat.text = energy.ToString();
             EventManagerTestLiam.instance.GoToWork();
         }
@@ -75,9 +75,9 @@ public class Energy : MonoBehaviour
 
     void ActivityStream()
     {
-        if (canDoThing == true && energy > 0)
+        if (canDoThing == true && energy >=2)
         {
-            energy--;
+            energy-=2;
             enerStat.text = energy.ToString();
             EventManagerTestLiam.instance.GoLive();
         }

@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rentCount: 7
-  rentCost: 10
+  rentCost: 1000
 --- !u!114 &352524061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,6 +1567,7 @@ MonoBehaviour:
   day: 0
   money: 500
   happiness: 5
+  streamMon: 0
   monStat: {fileID: 521244070}
   HappStat: {fileID: 2063204753}
   dayStat: {fileID: 1592966374}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Email : MonoBehaviour
 {
@@ -8,18 +9,18 @@ public class Email : MonoBehaviour
     public GameObject rentEmail;
     public GameObject tutorial;
 
-    public GameObject StreamButton;
-    public GameObject WorkButton;
-    public GameObject ShutDownButton;
-    public GameObject ShoppingButton;
+    public Button StreamButton;
+    public Button WorkButton;
+    public Button NextDayButton;
+    public Button ShoppingButton;
 
     // Start is called before the first frame update
     void Awake()
     {
-        StreamButton.GetComponent<BoxCollider>().enabled = false;
-        WorkButton.GetComponent<BoxCollider>().enabled = false;
-        ShutDownButton.GetComponent<BoxCollider>().enabled = false;
-        ShoppingButton.GetComponent<BoxCollider>().enabled = false;
+        StreamButton.enabled = false;
+        WorkButton.enabled = false;
+        NextDayButton.enabled = false;
+        ShoppingButton.enabled = false;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class Email : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
+    public void CloseEmail()
     {
         rentEmail.SetActive(false);
         tutorial.SetActive(true);

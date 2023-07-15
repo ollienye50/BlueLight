@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MicButton : MonoBehaviour
 {
     public bool isMicPurchased = false;
-    public GameObject micButt;
+    public Button micButt;
     public GameObject microphone;
 
     // Start is called before the first frame update
@@ -15,11 +16,11 @@ public class MicButton : MonoBehaviour
         microphone.SetActive(false);
     }
 
-    private void OnMouseDown()
+    public void MicrophoneBuy()
     {
         Debug.Log("pressed butt");
         isMicPurchased = true;
-        micButt.GetComponent<BoxCollider>().enabled = false;
+        micButt.enabled = false;
         microphone.SetActive(true);
         EnergyManagement.instance.money -= 20;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();

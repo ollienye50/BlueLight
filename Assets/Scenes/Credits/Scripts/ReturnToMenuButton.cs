@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ReturnToMenuButton : MonoBehaviour
 {
-    public void loadScene(string MainMenu)
+    public void BackToMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
     
 }

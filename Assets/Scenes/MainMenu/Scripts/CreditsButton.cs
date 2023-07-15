@@ -7,7 +7,7 @@ public class CreditButton : MonoBehaviour
 {
     public void Credits()
     {
-        SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadScene("Credits");
     }
 
 }

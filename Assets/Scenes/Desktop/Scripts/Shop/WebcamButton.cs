@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WebcamButton : MonoBehaviour
 {
     public bool isWebcamPurchased = false;
-    public GameObject webcamButt;
+    public Button webcamButt;
     public GameObject webcam;
     
     // Start is called before the first frame update
@@ -16,11 +17,11 @@ public class WebcamButton : MonoBehaviour
         webcam.SetActive(false);
     }
 
-    private void OnMouseDown()
+    public void WebcamBuy()
     {
         Debug.Log("pressed butt");
         isWebcamPurchased = true;
-        webcamButt.GetComponent<BoxCollider>().enabled = false;
+        webcamButt.enabled = false;
         webcam.SetActive(true);
         EnergyManagement.instance.money -= 10;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();

@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShoppingWindow : MonoBehaviour
 {
     public GameObject ShopWindow;
-    public GameObject StreamButton;
-    public GameObject WorkButton;
-    public GameObject ShutDownButton;
-    public GameObject ShoppingButton;
+    public Button StreamButt;
+    public Button WorkButt;
+    public Button NextDayButt;
+    public Button ShopButt;
 
     // Start is called before the first frame update
     void Start()
@@ -17,21 +18,15 @@ public class ShoppingWindow : MonoBehaviour
         ShopWindow.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ToggleOn()
     {
         print("open");
         ShopWindow.SetActive(true);
         //turn off any buttons from being pressed
-        StreamButton.GetComponent<BoxCollider>().enabled = false;
-        WorkButton.GetComponent<BoxCollider>().enabled = false;
-        ShutDownButton.GetComponent<BoxCollider>().enabled = false;
-        ShoppingButton.GetComponent<BoxCollider>().enabled = false;
+        StreamButt.enabled = false;
+        WorkButt.enabled = false;
+        ShopButt.enabled = false;
+        NextDayButt.enabled = false;
     }
 
     public void ToggleOff()
@@ -39,9 +34,9 @@ public class ShoppingWindow : MonoBehaviour
         print("close");
         ShopWindow.SetActive(false);
         //turn on any buttons from being pressed
-        StreamButton.GetComponent<BoxCollider>().enabled = true;
-        WorkButton.GetComponent<BoxCollider>().enabled = true;
-        ShutDownButton.GetComponent<BoxCollider>().enabled = true;
-        ShoppingButton.GetComponent<BoxCollider>().enabled = true;
+        StreamButt.enabled = true;
+        WorkButt.enabled = true;
+        ShopButt.enabled = true;
+        NextDayButt.enabled = true;
     }
 }

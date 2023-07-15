@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static UnityEngine.EventSystems.EventTrigger;
 
 public class CatButton : MonoBehaviour
 {
     public bool isCatPurchased = false;
-    public GameObject catButt;
+    public Button catButt;
     public GameObject catPoster;
 
     // Start is called before the first frame update
@@ -16,11 +17,11 @@ public class CatButton : MonoBehaviour
         catPoster.SetActive(false);
     }
 
-    private void OnMouseDown()
+    public void PosterBuy()
     {
         Debug.Log("pressed butt");
         isCatPurchased = true;
-        catButt.GetComponent<BoxCollider>().enabled = false;
+        catButt.enabled = false;
         catPoster.SetActive(true);
         EnergyManagement.instance.money -= 5;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();

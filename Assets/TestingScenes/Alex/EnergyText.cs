@@ -20,10 +20,4 @@ public class EnergyText : MonoBehaviour
     {
         IconText.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

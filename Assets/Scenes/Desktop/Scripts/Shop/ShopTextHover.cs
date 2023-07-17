@@ -9,7 +9,7 @@ public class ShopTextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
-		ShopText.text = "Hovering";
+		ShopText.text = "Shop (1 Energy)";
 	}
 
 	public void OnPointerExit (PointerEventData eventData)

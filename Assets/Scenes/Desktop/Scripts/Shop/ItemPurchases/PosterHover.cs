@@ -2,18 +2,18 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ShopTextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class PosterHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
-	public Text ShopText;
+	public Text PosterText;
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
-		ShopText.text = "Shop";
+		PosterText.text = "Microphone (-1E, -20M, +1H)";
 	}
 
 	public void OnPointerExit (PointerEventData eventData)
 	{
-		ShopText.text = " ";
+		PosterText.text = " ";
 	}
 }

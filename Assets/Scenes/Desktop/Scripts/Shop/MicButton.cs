@@ -22,9 +22,9 @@ public class MicButton : MonoBehaviour
         isMicPurchased = true;
         micButt.enabled = false;
         microphone.SetActive(true);
-        EnergyManagement.instance.money -= 20;
+        EnergyManagement.instance.money -= 100;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
-        EnergyManagement.instance.happiness += 8;
+        EnergyManagement.instance.happiness += 5;
         EnergyManagement.instance.HappStat.text = EnergyManagement.instance.happiness.ToString();
         Energy.instance.energy -= 1;
         Energy.instance.enerStat.text = Energy.instance.energy.ToString();

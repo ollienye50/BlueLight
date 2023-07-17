@@ -23,9 +23,9 @@ public class CatButton : MonoBehaviour
         isCatPurchased = true;
         catButt.enabled = false;
         catPoster.SetActive(true);
-        EnergyManagement.instance.money -= 5;
+        EnergyManagement.instance.money -= 20;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
-        EnergyManagement.instance.happiness += 3;
+        EnergyManagement.instance.happiness += 1;
         EnergyManagement.instance.HappStat.text = EnergyManagement.instance.happiness.ToString();
         Energy.instance.energy -= 1;
         Energy.instance.enerStat.text = Energy.instance.energy.ToString();

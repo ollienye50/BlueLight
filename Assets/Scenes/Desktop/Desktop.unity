@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 31536743}
   - component: {fileID: 31536742}
   m_Layer: 5
-  m_Name: WorkButton
+  m_Name: WorkText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369,8 +369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -164.4, y: 70.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -164.4, y: 70.9}
+  m_SizeDelta: {x: 185.69, y: 22.2037}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &31536742
 MonoBehaviour:
@@ -394,10 +394,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Work
+  m_Text: ' '
 --- !u!222 &31536743
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -657,6 +657,7 @@ GameObject:
   - component: {fileID: 89126453}
   - component: {fileID: 89126452}
   - component: {fileID: 89126455}
+  - component: {fileID: 89126456}
   m_Layer: 5
   m_Name: WorkButt
   m_TagString: Untagged
@@ -797,6 +798,19 @@ MonoBehaviour:
   StreamWindow: {fileID: 818598604}
   WorkWindow: {fileID: 515759416}
   camera: {fileID: 676004625}
+--- !u!114 &89126456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89126450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa56d047b6db9344af82b55ddce891c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WorkText: {fileID: 31536742}
 --- !u!1 &155944246
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +960,7 @@ GameObject:
   - component: {fileID: 187170785}
   - component: {fileID: 187170784}
   m_Layer: 5
-  m_Name: StreamButton
+  m_Name: StreamText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +984,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: -164.4, y: 195}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 185.6873, y: 21.4241}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &187170784
 MonoBehaviour:
@@ -994,7 +1008,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1005,7 +1019,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stream
+  m_Text: ' '
 --- !u!222 &187170785
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1013,7 +1027,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187170782}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &215760538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2402,7 @@ GameObject:
   - component: {fileID: 778176664}
   - component: {fileID: 778176663}
   m_Layer: 5
-  m_Name: NextDay
+  m_Name: NextDayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2411,8 +2425,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -164.4, y: 8.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -164.4, y: 8.6}
+  m_SizeDelta: {x: 185.69, y: 22.7}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &778176663
 MonoBehaviour:
@@ -2436,10 +2450,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2447,7 +2461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next Day
+  m_Text: ' '
 --- !u!222 &778176664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2870,6 +2884,7 @@ GameObject:
   - component: {fileID: 988315972}
   - component: {fileID: 988315975}
   - component: {fileID: 988315976}
+  - component: {fileID: 988315977}
   m_Layer: 5
   m_Name: NextDayButton
   m_TagString: Untagged
@@ -3015,6 +3030,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0758ea235e478c4dba29306123b8cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &988315977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988315970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330ed696e351f384f839e894183e6020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndDayText: {fileID: 778176663}
 --- !u!1 &1124871404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3957,9 +3985,10 @@ RectTransform:
   - {fileID: 1727796007}
   - {fileID: 1592966373}
   - {fileID: 395650314}
-  - {fileID: 187170783}
   - {fileID: 31536741}
   - {fileID: 778176662}
+  - {fileID: 187170783}
+  - {fileID: 2017178999}
   m_Father: {fileID: 215760542}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4283,6 +4312,7 @@ GameObject:
   - component: {fileID: 1585322544}
   - component: {fileID: 1585322543}
   - component: {fileID: 1585322546}
+  - component: {fileID: 1585322547}
   m_Layer: 5
   m_Name: StreamButt
   m_TagString: Untagged
@@ -4366,6 +4396,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1585322547}
+        m_TargetAssemblyTypeName: StreamTextHover, Assembly-CSharp
+        m_MethodName: OnMouseOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1585322544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4423,6 +4465,19 @@ MonoBehaviour:
   StreamWindow: {fileID: 818598604}
   WorkWindow: {fileID: 515759416}
   camera: {fileID: 676004625}
+--- !u!114 &1585322547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585322541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c43b071ef57e6743bdd03662794b0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StreamText: {fileID: 187170784}
 --- !u!1 &1592966372
 GameObject:
   m_ObjectHideFlags: 0
@@ -5155,6 +5210,7 @@ GameObject:
   - component: {fileID: 1780634915}
   - component: {fileID: 1780634914}
   - component: {fileID: 1780634917}
+  - component: {fileID: 1780634918}
   m_Layer: 5
   m_Name: ShopButt
   m_TagString: Untagged
@@ -5293,6 +5349,19 @@ MonoBehaviour:
   WorkButt: {fileID: 89126452}
   NextDayButt: {fileID: 988315972}
   ShopButt: {fileID: 1780634914}
+--- !u!114 &1780634918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780634912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16e2edfd57a1ab419ee3e07c1ceefdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShopText: {fileID: 2017178997}
 --- !u!1 &1853123712
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5597,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010394314}
   m_CullTransparentMesh: 1
+--- !u!1 &2017178996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2017178999}
+  - component: {fileID: 2017178998}
+  - component: {fileID: 2017178997}
+  m_Layer: 5
+  m_Name: ShopText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2017178997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017178996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ' '
+--- !u!222 &2017178998
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017178996}
+  m_CullTransparentMesh: 0
+--- !u!224 &2017178999
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017178996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1407629010}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -164.4, y: 136.41}
+  m_SizeDelta: {x: 185.6873, y: 21.4241}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &2063204751
 GameObject:
   m_ObjectHideFlags: 0

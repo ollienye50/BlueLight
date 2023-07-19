@@ -23,7 +23,7 @@ public class WebcamButton : MonoBehaviour
         isWebcamPurchased = true;
         webcamButt.enabled = false;
         webcam.SetActive(true);
-        EnergyManagement.instance.money -= 80;
+        EnergyManagement.instance.money -= 60;
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
         EnergyManagement.instance.happiness += 2;
         EnergyManagement.instance.HappStat.text = EnergyManagement.instance.happiness.ToString();

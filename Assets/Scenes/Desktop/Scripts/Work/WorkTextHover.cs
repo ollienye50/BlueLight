@@ -9,7 +9,7 @@ public class WorkTextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
-		WorkText.text = "Work (+75 M, -3 H, -2 E)";
+		WorkText.text = "Work (+85 M, -3 H, -2 E)";
 	}
 
 	public void OnPointerExit (PointerEventData eventData)

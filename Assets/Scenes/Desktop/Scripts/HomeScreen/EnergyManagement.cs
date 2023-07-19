@@ -75,7 +75,7 @@ public class EnergyManagement : MonoBehaviour
 
     void Shift()
     {
-        money += 75;
+        money += 100;
         monStat.text = money.ToString();
         happiness -= 3;
         HappStat.text = happiness.ToString();

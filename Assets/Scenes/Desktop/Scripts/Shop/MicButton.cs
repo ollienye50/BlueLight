@@ -26,6 +26,7 @@ public class MicButton : MonoBehaviour
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
         EnergyManagement.instance.happiness += 5;
         EnergyManagement.instance.HappStat.text = EnergyManagement.instance.happiness.ToString();
+        EnergyManagement.instance.streamMon += 10;
         Energy.instance.energy -= 1;
         Energy.instance.enerStat.text = Energy.instance.energy.ToString();
     }

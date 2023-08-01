@@ -21,14 +21,16 @@ public class EnergyManagement : MonoBehaviour
 
     // public TestStream potat;
     //public Energy energyScript;
-    public int day;
-    public int money;
-    public int happiness;
-    public int streamMon;
+    public float day;
+    public float money;
+    public float happiness;
+    public float streamMon;
     public Text monStat;
     public Text HappStat;
     public Text dayStat;
     public Text rentStat;
+    public float streamRev = 0f;
+    public float viewers = 0f;
 
 
     // Start is called before the first frame update
@@ -84,10 +86,30 @@ public class EnergyManagement : MonoBehaviour
 
     void Live()
     {
+        if(streamMon <= 20)
+        {
+            streamRev = Random.Range(-5, 5);
+            viewers = streamRev + 5;
+        }
+        else if(streamMon > 20 && streamMon <= 40)
+        {
+            streamRev = Random.Range(-10, 10);
+            viewers = streamRev + 10;
+        }
+        else if (streamMon > 40 && streamMon <= 70)
+        {
+            streamRev = Random.Range(-15, 15);
+            viewers = streamRev + 15;
+        }
+        else
+        {
+            streamRev = Random.Range(-20, 20);
+            viewers = streamRev + 20;
+        }
         monStat.text = money.ToString();
         happiness += 2;
         streamMon += 5;
-        money += streamMon;
+        money += streamMon + streamRev;
         monStat.text = money.ToString();
         HappStat.text = happiness.ToString();
     }

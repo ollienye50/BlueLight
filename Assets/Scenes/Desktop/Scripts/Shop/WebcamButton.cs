@@ -27,6 +27,7 @@ public class WebcamButton : MonoBehaviour
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
         EnergyManagement.instance.happiness += 2;
         EnergyManagement.instance.HappStat.text = EnergyManagement.instance.happiness.ToString();
+        EnergyManagement.instance.streamMon += 5;
         Energy.instance.energy -= 1;
         Energy.instance.enerStat.text = Energy.instance.energy.ToString();
     }

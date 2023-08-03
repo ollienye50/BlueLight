@@ -27,7 +27,7 @@ public class CatButton : MonoBehaviour
         EnergyManagement.instance.monStat.text = EnergyManagement.instance.money.ToString();
         EnergyManagement.instance.happiness += 1;
         EnergyManagement.instance.HappStat.text = EnergyManagement.instance.happiness.ToString();
-        Energy.instance.energy -= 1;
+        Energy.instance.energy += 1;
         Energy.instance.enerStat.text = Energy.instance.energy.ToString();
     }
 }

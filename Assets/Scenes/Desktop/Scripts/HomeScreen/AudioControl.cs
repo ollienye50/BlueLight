@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioControl : MonoBehaviour
 {
-    public Animator musicAnim;
+    public Animator layer1;
     public float waitTime;
 
     // Start is called before the first frame update
@@ -24,7 +24,8 @@ public class AudioControl : MonoBehaviour
 
     IEnumerator Fade()
     {
-        musicAnim.SetTrigger("Layer1FadeOut");
+        layer1.SetTrigger("Layer1FadeOut");
         yield return new WaitForSeconds(waitTime);
+        //layer1.SetTrigger("Layer1FadeIn");
     }
 }

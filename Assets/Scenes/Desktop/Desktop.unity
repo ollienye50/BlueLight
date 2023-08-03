@@ -2006,6 +2006,9 @@ MonoBehaviour:
   rentStat: {fileID: 501206043}
   streamRev: 0
   viewers: 0
+  happy: 0
+  sad: 0
+  depressed: 0
 --- !u!1 &588305971
 GameObject:
   m_ObjectHideFlags: 0
@@ -6300,7 +6303,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6431,6 +6434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layer1: {fileID: 1851202324}
+  layer2: {fileID: 1961062004}
+  layer3: {fileID: 1938094971}
   waitTime: 2
 --- !u!1 &1853123712
 GameObject:
@@ -6571,14 +6576,14 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938094969}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7d0a9b6611513a24681b9236686f8104, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -6700,14 +6705,14 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961062001}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3e9588e7a6da6a745a6da2ab590a7ded, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

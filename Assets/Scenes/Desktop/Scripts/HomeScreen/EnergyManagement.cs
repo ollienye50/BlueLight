@@ -31,6 +31,9 @@ public class EnergyManagement : MonoBehaviour
     public Text rentStat;
     public float streamRev = 0f;
     public float viewers = 0f;
+    public bool happy;
+    public bool sad;
+    public bool depressed;
 
 
     // Start is called before the first frame update
@@ -55,6 +58,7 @@ public class EnergyManagement : MonoBehaviour
         EventManagerTestLiam.instance.workShift.AddListener(Shift);
         EventManagerTestLiam.instance.streamSession.AddListener(Live);
         EventManagerTestLiam.instance.dayPassed.AddListener(DayStart);
+        happy = true;
     }
 
     // Update is called once per frame
@@ -112,11 +116,52 @@ public class EnergyManagement : MonoBehaviour
         money += streamMon + streamRev;
         monStat.text = money.ToString();
         HappStat.text = happiness.ToString();
+        Recovery();
+    }
+
+    public void Recovery()
+    {
+        if (happiness >= 5)
+        {
+            if(depressed == true)
+            {
+                AudioControl.instance.Recover();
+                sad = true;
+                depressed = false;
+            }
+        }
+        if (happiness >= 9)
+        {
+            if(sad == true)
+            {
+                AudioControl.instance.GoodDay();
+                happy = true;
+                sad = false;
+            }
+        }
     }
 
     public void HappinessCheck()
     {
-        if(happiness <=0)
+        if(happiness <=7)
+        {
+            if(happy == true)
+            {
+                AudioControl.instance.Sad();
+                sad = true;
+                happy = false;
+            }
+        }
+        if (happiness <= 3)
+        {
+            if(sad == true)
+            {
+                AudioControl.instance.Depressed();
+                depressed = true;
+                sad = false;
+            }
+        }
+        if (happiness <=0)
         {
             SceneManager.LoadScene(2);
         }

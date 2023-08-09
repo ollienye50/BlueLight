@@ -9,7 +9,7 @@ public class WebcamHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
-		WebcamText.text = "Webcam (-1E, -60M, +2H)";
+		WebcamText.text = "-1E, -60M, +2H";
 	}
 
 	public void OnPointerExit (PointerEventData eventData)

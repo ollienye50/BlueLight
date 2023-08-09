@@ -9,12 +9,16 @@ public class WebcamButton : MonoBehaviour
     public bool isWebcamPurchased = false;
     public Button webcamButt;
     public GameObject webcam;
+    public GameObject item1Sold;
+    public GameObject item1Buy;
+    public GameObject camText;
     
     // Start is called before the first frame update
     void Awake()
     {
         isWebcamPurchased = false;
         webcam.SetActive(false);
+        item1Sold.SetActive(false);
     }
 
     public void WebcamBuy()
@@ -30,5 +34,8 @@ public class WebcamButton : MonoBehaviour
         EnergyManagement.instance.streamMon += 5;
         Energy.instance.energy -= 1;
         Energy.instance.enerStat.text = Energy.instance.energy.ToString();
+        item1Sold.SetActive(true);
+        item1Buy.SetActive(false);
+        camText.SetActive(false);
     }
 }

@@ -9,7 +9,7 @@ public class PosterHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
-		PosterText.text = "Poster (+1E, -20M, +1H)";
+		PosterText.text = "+1E, -20M, +1H";
 	}
 
 	public void OnPointerExit (PointerEventData eventData)

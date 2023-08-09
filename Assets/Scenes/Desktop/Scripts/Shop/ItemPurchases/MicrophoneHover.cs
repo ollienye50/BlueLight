@@ -9,7 +9,7 @@ public class MicrophoneHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
-		MicrophoneText.text = "Microphone (-1E, -100M, +5H)";
+		MicrophoneText.text = "-1E, -100M, +5H";
 	}
 
 	public void OnPointerExit (PointerEventData eventData)

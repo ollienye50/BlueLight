@@ -6,24 +6,43 @@ using UnityEngine.UI;
 
 public class WebcamButton : MonoBehaviour
 {
+    public static WebcamButton instance;
+    private void Awake()
+    {
+        isWebcamPurchased = false;
+        webcam.SetActive(false);
+        item1Sold.SetActive(false);
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     public bool isWebcamPurchased = false;
     public Button webcamButt;
     public GameObject webcam;
     public GameObject item1Sold;
     public GameObject item1Buy;
     public GameObject camText;
-    
-    // Start is called before the first frame update
-    void Awake()
-    {
-        isWebcamPurchased = false;
-        webcam.SetActive(false);
-        item1Sold.SetActive(false);
-    }
+
+    [SerializeField]
+    AudioSource purchaseSFX;
 
     public void WebcamBuy()
     {
+        Energy.instance.ShopCam();
+        
+    }
+
+    public void WebcamBought()
+    {
         Debug.Log("pressed butt");
+        purchaseSFX.Play();
         isWebcamPurchased = true;
         webcamButt.enabled = false;
         webcam.SetActive(true);

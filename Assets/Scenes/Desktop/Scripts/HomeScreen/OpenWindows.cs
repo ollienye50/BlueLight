@@ -17,6 +17,13 @@ public class OpenWindows : MonoBehaviour
     public GameObject WorkWindow;
     public Camera camera;
 
+    [SerializeField]
+    AudioSource mouseClick;
+    [SerializeField]
+    AudioSource workSFX;
+    [SerializeField]
+    AudioSource streamSFX;
+
     void Start()
     {
         //set stream and work windows to false
@@ -36,8 +43,9 @@ public class OpenWindows : MonoBehaviour
         NextDayButt.enabled = false;
         StreamWindow.gameObject.SetActive(true);
         Debug.Log("wait");
+        streamSFX.Play();
         //wait a few seconds
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         StreamWindow.gameObject.SetActive(false);
         //set all buttons to true
         StreamButt.enabled = true;
@@ -56,8 +64,9 @@ public class OpenWindows : MonoBehaviour
         NextDayButt.enabled = false;
         WorkWindow.gameObject.SetActive(true);
         Debug.Log("wait");
+        workSFX.Play();
         //wait a few seconds
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         WorkWindow.gameObject.SetActive(false);
         //set all buttons to true
         StreamButt.enabled = true;
@@ -67,29 +76,14 @@ public class OpenWindows : MonoBehaviour
         yield break;
     }
 
-    /*void Update()
+    void Update()
     {
       if (Input.GetMouseButtonDown(0))
-        {
+      {
             Debug.Log("Mouse Click");
-            RaycastHit hit;
-            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log(hit.transform.Button.name);
-                if (StreamButt == hit.transform.Button)
-                {
-                    EventManagerTestLiam.instance.EnergySupplyStream();
-                }
-                if (WorkButt == hit.transform.Button)
-                {
-                    EventManagerTestLiam.instance.EnergySupplyWork();
-                }
-
-            }
-        }
-
-    }*/
+            mouseClick.Play();
+      }
+    }
 
     public void Stream()
     {

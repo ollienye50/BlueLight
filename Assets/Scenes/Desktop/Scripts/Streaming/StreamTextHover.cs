@@ -9,7 +9,7 @@ public class StreamTextHover : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
 	public void OnPointerEnter (PointerEventData eventData)
 	{
-		StreamText.text = "Stream (+" + (EnergyManagement.instance.streamMon+5) + "M, +2 H, -2 E)";
+		StreamText.text = "Stream (+" + (EnergyManagement.instance.streamMon+3) + "M, +2 H, -2 E)";
 	}
 
 	public void OnPointerExit (PointerEventData eventData)

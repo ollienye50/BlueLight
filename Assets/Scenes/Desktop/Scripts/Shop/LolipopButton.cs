@@ -11,16 +11,36 @@ public class LolipopButton : MonoBehaviour
     public GameObject item5Buy;
     public GameObject lolipopText;
 
+    public static LolipopButton instance;
+
+    [SerializeField]
+    AudioSource purchaseSFX;
+
     // Start is called before the first frame update
     void Awake()
     {
         isLolipopPurchased = false;
         item5Sold.SetActive(false);
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void LolipopBuy()
     {
+        Energy.instance.ShopLolipop();
+    }
+
+    public void LolipopBought()
+    {
         Debug.Log("pressed butt");
+        purchaseSFX.Play();
         isLolipopPurchased = true;
         lolipopButt.enabled = false;
         EnergyManagement.instance.money -= 10;

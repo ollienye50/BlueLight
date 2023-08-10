@@ -11,16 +11,36 @@ public class DrinkButton : MonoBehaviour
     public GameObject item4Buy;
     public GameObject drinkText;
 
+    public static DrinkButton instance;
+
+    [SerializeField]
+    AudioSource purchaseSFX;
+
     // Start is called before the first frame update
     void Awake()
     {
         isDrinkPurchased = false;
         item4Sold.SetActive(false);
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void DrinkBuy()
     {
+        Energy.instance.ShopDrink();
+    }
+
+    public void DrinkBought()
+    {
         Debug.Log("pressed butt");
+        purchaseSFX.Play();
         isDrinkPurchased = true;
         drinkButt.enabled = false;
         EnergyManagement.instance.money -= 10;

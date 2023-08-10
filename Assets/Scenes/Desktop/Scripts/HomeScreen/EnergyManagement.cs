@@ -112,7 +112,7 @@ public class EnergyManagement : MonoBehaviour
         }
         monStat.text = money.ToString();
         happiness += 2;
-        streamMon += 5;
+        streamMon += 3;
         money += streamMon + streamRev;
         monStat.text = money.ToString();
         HappStat.text = happiness.ToString();

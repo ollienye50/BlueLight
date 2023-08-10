@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class MicButton : MonoBehaviour
 {
@@ -13,17 +12,37 @@ public class MicButton : MonoBehaviour
     public GameObject item2Buy;
     public GameObject microphoneText;
 
+    public static MicButton instance;
+
+    [SerializeField]
+    AudioSource purchaseSFX;
+
     // Start is called before the first frame update
     void Awake()
     {
         isMicPurchased = false;
         microphone.SetActive(false);
         item2Sold.SetActive(false);
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void MicrophoneBuy()
     {
+        Energy.instance.ShopMic();
+    }
+
+    public void MicBought()
+    {
         Debug.Log("pressed butt");
+        purchaseSFX.Play();
         isMicPurchased = true;
         micButt.enabled = false;
         microphone.SetActive(true);

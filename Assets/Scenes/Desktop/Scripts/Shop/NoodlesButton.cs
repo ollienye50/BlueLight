@@ -11,16 +11,36 @@ public class NoodlesButton : MonoBehaviour
     public GameObject item6Buy;
     public GameObject noodlesText;
 
+    public static NoodlesButton instance;
+
+    [SerializeField]
+    AudioSource purchaseSFX;
+
     // Start is called before the first frame update
     void Awake()
     {
         isNoodlesPurchased = false;
         item6Sold.SetActive(false);
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void NoodlesBuy()
     {
+        Energy.instance.ShopNoodles();
+    }
+
+    public void NoodlesBought()
+    {
         Debug.Log("pressed butt");
+        purchaseSFX.Play();
         isNoodlesPurchased = true;
         noodlesButt.enabled = false;
         EnergyManagement.instance.money -= 10;

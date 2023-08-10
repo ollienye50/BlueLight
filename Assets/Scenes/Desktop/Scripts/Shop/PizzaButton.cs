@@ -11,16 +11,36 @@ public class PizzaButton : MonoBehaviour
     public GameObject item7Buy;
     public GameObject pizzaText;
 
+    public static PizzaButton instance;
+
+    [SerializeField]
+    AudioSource purchaseSFX;
+
     // Start is called before the first frame update
     void Awake()
     {
         isPizzaPurchased = false;
         item7Sold.SetActive(false);
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void PizzaBuy()
     {
+        Energy.instance.ShopPizza();
+    }
+
+    public void PizzaBought()
+    {
         Debug.Log("pressed butt");
+        purchaseSFX.Play();
         isPizzaPurchased = true;
         pizzaButt.enabled = false;
         EnergyManagement.instance.money -= 10;

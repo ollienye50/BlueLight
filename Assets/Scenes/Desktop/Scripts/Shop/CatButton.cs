@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
-using static UnityEngine.EventSystems.EventTrigger;
 
 public class CatButton : MonoBehaviour
 {
@@ -14,17 +12,37 @@ public class CatButton : MonoBehaviour
     public GameObject item3Buy;
     public GameObject posterText;
 
+    public static CatButton instance;
+
+    [SerializeField]
+    AudioSource purchaseSFX;
+
     // Start is called before the first frame update
     void Awake()
     {
         isCatPurchased = false;
         catPoster.SetActive(false);
         item3Sold.SetActive(false);
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     public void PosterBuy()
     {
+        Energy.instance.ShopPoster();
+    }
+
+    public void PosterBought()
+    {
         Debug.Log("pressed butt");
+        purchaseSFX.Play();
         isCatPurchased = true;
         catButt.enabled = false;
         catPoster.SetActive(true);

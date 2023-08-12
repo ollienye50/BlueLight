@@ -121,7 +121,7 @@ public class EnergyManagement : MonoBehaviour
 
     public void Recovery()
     {
-        if (happiness >= 5)
+        if (happiness >= 9)
         {
             if(depressed == true)
             {
@@ -130,7 +130,7 @@ public class EnergyManagement : MonoBehaviour
                 depressed = false;
             }
         }
-        if (happiness >= 9)
+        if (happiness >= 16)
         {
             if(sad == true)
             {
@@ -143,7 +143,7 @@ public class EnergyManagement : MonoBehaviour
 
     public void HappinessCheck()
     {
-        if(happiness <=7)
+        if(happiness <=13)
         {
             if(happy == true)
             {
@@ -152,7 +152,7 @@ public class EnergyManagement : MonoBehaviour
                 happy = false;
             }
         }
-        if (happiness <= 3)
+        if (happiness <= 7)
         {
             if(sad == true)
             {
@@ -177,7 +177,7 @@ public class EnergyManagement : MonoBehaviour
 
     public void DayCheck()
     {
-        if (day >= 22)
+        if (streamMon >=100)
         {
             SceneManager.LoadScene(3);
         }

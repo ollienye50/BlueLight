@@ -1080,8 +1080,8 @@ MonoBehaviour:
   WorkWindow: {fileID: 515759416}
   camera: {fileID: 676004625}
   mouseClick: {fileID: 417892196}
-  workSFX: {fileID: 0}
-  streamSFX: {fileID: 0}
+  workSFX: {fileID: 406202906}
+  streamSFX: {fileID: 213484035}
 --- !u!114 &89126456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5316,7 +5316,6 @@ GameObject:
   - component: {fileID: 988315974}
   - component: {fileID: 988315973}
   - component: {fileID: 988315972}
-  - component: {fileID: 988315975}
   - component: {fileID: 988315976}
   - component: {fileID: 988315977}
   m_Layer: 5
@@ -5440,18 +5439,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988315970}
   m_CullTransparentMesh: 1
---- !u!114 &988315975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988315970}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16bac38c72876be4fa5e396f771b277a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &988315976
 MonoBehaviour:
   m_ObjectHideFlags: 0

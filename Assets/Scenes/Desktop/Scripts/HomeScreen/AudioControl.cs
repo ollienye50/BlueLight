@@ -7,13 +7,14 @@ public class AudioControl : MonoBehaviour
     public static AudioControl instance;
     private void Awake()
     {
-        if (instance != null && instance != this)
+        if (instance == null)
         {
-            Destroy(this);
+            instance = this;
+            DontDestroyOnLoad(instance);
         }
         else
         {
-            instance = this;
+            Destroy(gameObject);
         }
     }
 

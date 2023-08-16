@@ -10,7 +10,15 @@ public class NextDay : MonoBehaviour
 
     public void SkipDay()
     {
+        StartCoroutine(DayEnd());
+    }
+
+    IEnumerator DayEnd()
+    {
         ShutDownSFX.Play();
+        FadeControl.instance.HideBackground();
+        Debug.Log("Fade Out");
+        yield return new WaitForSeconds(1);
         EventManagerTestLiam.instance.NextDay();
     }
 }

@@ -69,6 +69,7 @@ public class EnergyManagement : MonoBehaviour
 
     void DayStart()
     {
+        FadeControl.instance.ShowBackground();
         day++;
         RentCounter.instance.rentCount-=1;
         RentCounter.instance.RentCheck();
@@ -76,7 +77,7 @@ public class EnergyManagement : MonoBehaviour
         dayStat.text = day.ToString();
         rentStat.text = RentCounter.instance.rentCount.ToString();
         MoneyCheck();
-        DayCheck();
+        WinCondition();
     }
 
     void Shift()
@@ -175,7 +176,7 @@ public class EnergyManagement : MonoBehaviour
         }
     }
 
-    public void DayCheck()
+    public void WinCondition()
     {
         if (streamMon >=100)
         {

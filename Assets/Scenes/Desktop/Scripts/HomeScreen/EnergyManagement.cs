@@ -172,7 +172,7 @@ public class EnergyManagement : MonoBehaviour
     {
         if (money <= 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(5);
         }
     }
 

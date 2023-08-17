@@ -7,6 +7,7 @@ public class NextDay : MonoBehaviour
 {
     [SerializeField]
     AudioSource ShutDownSFX;
+    public float waiting;
 
     public void SkipDay()
     {
@@ -15,10 +16,12 @@ public class NextDay : MonoBehaviour
 
     IEnumerator DayEnd()
     {
-        ShutDownSFX.Play();
         FadeControl.instance.HideBackground();
+        yield return new WaitForSeconds(waiting);
+        ShutDownSFX.Play();
         Debug.Log("Fade Out");
         yield return new WaitForSeconds(1);
+
         EventManagerTestLiam.instance.NextDay();
     }
 }

@@ -269,6 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7349834a7b8b447a519d55a7f8d118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  waitTime: 0
 --- !u!1 &204999696
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,8 +805,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1670071253}
   - {fileID: 2145457479}
+  - {fileID: 1670071253}
   - {fileID: 1470606476}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -960,6 +962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7349834a7b8b447a519d55a7f8d118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1470606480}
+  waitTime: 1
 --- !u!1 &1470606475
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +975,8 @@ GameObject:
   - component: {fileID: 1470606476}
   - component: {fileID: 1470606478}
   - component: {fileID: 1470606477}
+  - component: {fileID: 1470606479}
+  - component: {fileID: 1470606480}
   m_Layer: 5
   m_Name: Fade
   m_TagString: Untagged
@@ -1012,7 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1036,6 +1042,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470606475}
   m_CullTransparentMesh: 1
+--- !u!225 &1470606479
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470606475}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &1470606480
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470606475}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a3e067548aa39648a5540e4911ffcda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1670071252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1670071252}
-  credits: {fileID: 2145457478}
 --- !u!1 &2145457478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,4 +1808,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1670071252}
-  credits: {fileID: 2145457478}

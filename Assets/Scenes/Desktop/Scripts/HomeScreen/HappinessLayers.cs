@@ -22,7 +22,7 @@ public class HappinessLayers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(EnergyManagement.instance.happiness >= 10)
+        if(EnergyManagement.instance.happiness >= 16)
         {
             Layer1.SetActive(false);
             Layer2.SetActive(false);
@@ -31,7 +31,7 @@ public class HappinessLayers : MonoBehaviour
             Layer5.SetActive(false);
         }
     
-        if(EnergyManagement.instance.happiness <= 9 && EnergyManagement.instance.happiness >= 8)
+        if(EnergyManagement.instance.happiness <= 15 && EnergyManagement.instance.happiness >= 14)
         {
             Layer1.SetActive(true);
             Layer2.SetActive(false);
@@ -40,7 +40,7 @@ public class HappinessLayers : MonoBehaviour
             Layer5.SetActive(false);
         }
 
-        if(EnergyManagement.instance.happiness <= 7 && EnergyManagement.instance.happiness >= 6)
+        if(EnergyManagement.instance.happiness >= 9 && EnergyManagement.instance.happiness <= 11)
         {
             Layer1.SetActive(true);
             Layer2.SetActive(true);
@@ -49,7 +49,7 @@ public class HappinessLayers : MonoBehaviour
             Layer5.SetActive(false);
         }
 
-        if(EnergyManagement.instance.happiness <= 5 && EnergyManagement.instance.happiness >= 3)
+        if(EnergyManagement.instance.happiness >= 7 && EnergyManagement.instance.happiness <= 8)
         {
             Layer1.SetActive(true);
             Layer2.SetActive(true);
@@ -58,7 +58,7 @@ public class HappinessLayers : MonoBehaviour
             Layer5.SetActive(false);
         }
 
-        if (EnergyManagement.instance.happiness == 2)
+        if (EnergyManagement.instance.happiness >= 5 && EnergyManagement.instance.happiness <= 6)
         {
             Layer1.SetActive(true);
             Layer2.SetActive(true);
@@ -67,7 +67,7 @@ public class HappinessLayers : MonoBehaviour
             Layer5.SetActive(false);
         }
 
-        if (EnergyManagement.instance.happiness == 1)
+        if (EnergyManagement.instance.happiness >= 1 && EnergyManagement.instance.happiness <= 4)
         {
             Layer1.SetActive(true);
             Layer2.SetActive(true);

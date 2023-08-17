@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 1550397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.7134101, y: 2.2495322, z: 2.2495322}
+  m_LocalScale: {x: 2.857221, y: 2.3687575, z: 2.3687575}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1895186727}
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -301, y: -1075}
+  m_AnchoredPosition: {x: -287, y: -1075}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550399
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2f675c91654443f4ca2c5c7ebadf61ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 110ff7c8fd645b7468ea846a1639985a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -983,7 +983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177, y: -1075}
+  m_AnchoredPosition: {x: 154, y: -1075}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659745982
@@ -1142,7 +1142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.244, y: -1021}
+  m_AnchoredPosition: {x: -16.244, y: -956}
   m_SizeDelta: {x: 962.7491, y: 1475.7577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1895186728
@@ -1169,7 +1169,7 @@ MonoBehaviour:
     Holt & Massimo Carraro\n\nArtists -\nDean Scott, Nathan Slegers & Oliver Horton\n\nAdditional
     Code By -\nCupheadGF & Alex Gubieski\n\nFont Pack Used -\nPixel Operator-Bold
     (Jayvee Enaguas, 2011) https://www.dafont.com/pixel-operator.font?l[]=10&l[]=1&l[]=6
-    \r\n\nSFX -\nVideo Game3 (Xcreenplay, 2022) https://freesound.org/people/Xcreenplay/sounds/663197/\r\nMouse
+    \r\n\nSFX -\nI'm in the Not-a-Club (Komiku, 2020) https://freemusicarchive.org/music/Komiku/Helice_Awesome_Dance_Adventure_/im-in-the-not-a-club/\nMouse
     Click (MATRIXXX_, 2016) https://freesound.org/people/MATRIXXX_/sounds/365648/\r\nComputer
     Keyboard Sound (Sandra_D., 2023) https://freesound.org/people/Sandra_D./sounds/684794/\r\nTill-Gong-Bike
     remixes of kiddpark's Freesound #201159 (Timbre, 2017) https://freesound.org/people/Timbre/sounds/404028/\r\nKnock_the_door
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.0712585, w: -118.62903}
+  m_margin: {x: 17.318268, y: 0, z: 20.473755, w: -118.62903}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -17,10 +17,12 @@ public class NextDay : MonoBehaviour
     IEnumerator DayEnd()
     {
         FadeControl.instance.HideBackground();
+        Cursor.lockState = CursorLockMode.Locked;
         yield return new WaitForSeconds(waiting);
         ShutDownSFX.Play();
         Debug.Log("Fade Out");
         yield return new WaitForSeconds(1);
+        Cursor.lockState = CursorLockMode.None;
 
         EventManagerTestLiam.instance.NextDay();
     }
